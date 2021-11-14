@@ -1,0 +1,19 @@
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <span id="hamburger-menu-close-trigger">
+                            <span class="hamburger-menu-close">
+                                <span></span>
+                            </span>
+                        </span>
+                        {% assign pages = site.pages | sort:"weight"  %}
+                        <ul id="top-menu" class="menu">
+                            {% for p in pages %}
+                                {% if p.weight != '' %}
+                                    <li class="{% if p.url == page.url %}current-menu-parent{% endif %}">
+                                        <a href="{{ p.url }}">
+                                        {{ p.title }}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </nav>

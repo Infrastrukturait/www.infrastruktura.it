@@ -20,3 +20,22 @@
 
     </head>
     <body>
+
+    <!-- Page Wrapper -->
+    <div id="page" class="site"></div>
+    <div class="page-click-capture"></div>
+            <header id="masthead" class="site-header hamburger-side" role="banner">
+            <div class="container">
+                <div id="site-branding">
+                    <a class="logo-brand" href="/">
+                        <p><i class="fas fa-server"></i>                                {{ site.title }}</p>
+                    </a>
+                </div><!-- .site-branding -->
+                <span id="ham-trigger-wrap">
+                    <span class="ham-trigger">
+                        <span></span>
+                    </span>
+                </span>
+                {% include snippets/menu.html %}
+            </div><!-- .wrap -->
+        </header><!-- #masthead -->
