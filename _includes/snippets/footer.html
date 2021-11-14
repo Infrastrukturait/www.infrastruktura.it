@@ -5,16 +5,16 @@
     <div class="container">
         <div class="site-info">
             <p class="copyright">
-                infrastruktura.IT RAFAŁ MASIAREK<br/>
-                VAT EU: (PL)7272780694<br/>
-                Olimp**ska 4/19<br/>
-                94-043 LDZ, PL<br/>
+                {{ site.company_info | newline_to_br }}
             </p>
         </div>
         <nav class="footer-socials" role="navigation" aria-label="Footer Links Menu">
             <ul id="social-media-footer" class="social-links-menu">
-                <li><a href="{{ site.github_url }}"><i class="fab fa-github"></i></a></li>
-                <li><a href="{{ site.status_url }}"><i class="fa-solid fa-eye"></i></a></li>
+                {% for link in site.links %}
+                    {% if link.public %}
+                        <li><a href="{{ link.url }}" target="_blank"><i class="{{ link.icon }}"></i></a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </nav>
     </div>
