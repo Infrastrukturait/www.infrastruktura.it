@@ -1,3 +1,5 @@
+.devcontainer
+_config-dev.yml
 .DS_Store
 _site
 .sass-cache
