@@ -19,8 +19,8 @@ links:
     public : true
   - status:
     url: "https://status.infrastruktura.it/"
-    icon: "fa-watchman-monitoring"
-    public: true
+    icon: "fab fa-watchman-monitoring"
+    public: false
 
 plugins:
   - jekyll-feed
